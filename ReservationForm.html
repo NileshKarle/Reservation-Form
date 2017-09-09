@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- using link to implement external css. -->
+  
+<link rel="stylesheet" href="FormStyle.css">
+<meta charset="UTF-8">
+<title>Reservation Page</title>
+</head>
+<body background-color="#ecf0f1">
+	<header>My Reservation Form</header>
+	<form action="http://localhost:8080/MyServletProject/ReservationDetails" method="post">
+	<div class="row"> 
+	 <div id="d1" class="col-sm-4" text-align="right"><b> Accomodation <br>
+	 Name <br>
+	 Guests <br>
+	 Contact <br><br>
+	 Checkin<br>
+	 Equipment type <br>
+	 Required Service<br>
+	 Pets<br>
+	 Comment<br>
+	 </b></div>
+	<div class="col-sm-8" text-align="left">
+		<select name="Accomodation" id="s1">
+				<option value="RV">RV</option>
+				<option value="check">check</option>
+		</select> <br>
+		 <select id="s2" name="gender">
+				<option value="Mr">Mr</option>
+				<option value="Ms">Ms</option>
+		</select> <input id="ip1" type="text" name="firstname" placeholder="First Name" required>
+			<input id="ip1" type="text" name="lastname" placeholder="Last Name"><br>
+			 <input id="ip3" type="number" name="adult" placeholder="18+ years">
+			<input id="ip3" type="number" name="children" placeholder="2-17 years">
+			<input id="ip3" type="number" name="baby" placeholder="<2 years"><br>
+			 <input id="ip2" type="email" name="email" placeholder="E-mail" required><br>
+			<input id="ip2" type="tel" name="phone" minlength="10" maxlength="11" placeholder="phone: (xxx)- xxx xxxx"><br> <br>
+			 <input id="datepicker" type="date" name="checkIn" required> 
+			<b>Checkout</b> <input id="datepicker" type="date" name="checkOut" required><br> 
+			<br>
+			<select id="s1" name="equipmentRequired">
+				<option value="travelTrailer">Travel trailer</option>
+				<option value="party">Party</option>
+				<option value="reunion">Reunion</option>
+		</select> 
+		<b>Slide-outs </b>
+		<label class="switch">
+  			<input type="checkbox">
+ 			 <span class="slider"> YES .. NO</span>
+			</label><br>
+		 <select id="s2" class="form-control" id="sel2">
+			<option value="hydra">hydra</option>
+			<option value="water">water</option>
+			<option value="sewer">sewer</option>
+			</select>
+			<br>
+			<label class="switch">
+  			<input type="checkbox" checked name="pets">
+ 			 <span class="slider"> YES .. NO</span>
+			</label>
+			<br>
+			<textarea name="comment" row="3" cols="60" maxlength="180" placeholder="Additional comments"></textarea> <br>
+			<br>
+		</div>
+		</div>
+		<div class="row">
+  <div class="col-sm-6" id="d1"><button type="submit" class="btn btn-primary btn-lg">Request Reservation</button></div>
+  <div class="col-sm-3" id="d1"> <button type="reset" class="btn btn-danger btn-lg">Cancel</button></div>
+  <div class="col-sm-3"></div>
+ </div>
+	</form>
+</body>
+</html>
